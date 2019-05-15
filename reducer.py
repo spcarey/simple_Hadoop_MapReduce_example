@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 import sys
 
 # maps words to their counts
@@ -25,4 +25,4 @@ for line in sys.stdin:
 # write the tuples to stdout
 # Note: they are unsorted
 for word in word2count.keys():
-    print ('%s\t%s'% ( word, word2count[word] ))
+    print '%s\t%s'% ( word, word2count[word] )
