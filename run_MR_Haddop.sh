@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo python -m spacy download en
+
 
 hadoop fs -rm -r /warpeace/output
 
