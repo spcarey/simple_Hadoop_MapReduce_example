@@ -11,20 +11,25 @@ import string
 
 # Load spacy stopwords
 
-spacy_nlp = spacy.load('en_core_web_sm')
-spacy_stopwords = spacy.lang.en.stop_words.STOP_WORDS
-stop1 = set(spacy_stopwords)
+#spacy_nlp = spacy.load('en_core_web_sm')
+#spacy_stopwords = spacy.lang.en.stop_words.STOP_WORDS
+#stop1 = set(spacy_stopwords)
 #stop1 = set([x.encode('utf-8') for x in stop1])
+
 # load  sklearn stopwords
-stop2 = set(stop_words.ENGLISH_STOP_WORDS)
+
+stops = set(stop_words.ENGLISH_STOP_WORDS)
+
 # load nltk stopwords
-nltk.download('stopwords')
-stop3 = set(stopwords.words('english'))
+#nltk.download('stopwords')
+#stop3 = set(stopwords.words('english'))
 #stop3 = set([x.encode('utf-8') for x in stop3])
 
 # combine all stopwords  from each set
 
-stops = functools.reduce(or_, [stop1, stop2, stop3])
+#stops = functools.reduce(or_, [ stop2, stop3])
+
+# stops =
 
 # Remove stopwrods using loop
 
@@ -36,7 +41,7 @@ for line in sys.stdin:
     line = line.strip().lower()
 
     # remove punctuation
-    line =  line.translate(None, string.punctuation)
+    line =  line.translate(str.maketrans('', '', string.punctuation))
 
     # split the line into words; splits on any whitespace
     words = line.split()
@@ -44,4 +49,4 @@ for line in sys.stdin:
     # output tuples (word, 1) in tab-delimited format
     for word in words:
       if word not in  stops:
-        print '%s\t%s' % (word, "1")
+        print ('%s\t%s' % (word, "1"))
