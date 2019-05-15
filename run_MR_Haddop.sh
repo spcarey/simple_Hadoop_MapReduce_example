@@ -7,7 +7,7 @@ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
     -files mapper.py,reducer.py \
     -mapper mapper.py \
     -reducer reducer.py \
-    -input dataproc-34eba011-40cc-4cb9-b84c-941f772557bb-us-east1 \
+    -input gs://dataproc-34eba011-40cc-4cb9-b84c-941f772557bb-us-east1/2600-0.txt \
     -output /warpeace/output
 
  

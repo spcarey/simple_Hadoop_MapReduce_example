@@ -12,11 +12,11 @@ import string
 # Load spacy stopwords
 
 
-spacy_nlp = spacy.load('en')
+#spacy_nlp = spacy.load('en')
 
-spacy_stopwords = spacy.lang.en.stop_words.STOP_WORDS
-stop1 = set(spacy_stopwords)
-stop1 = set([x.encode('utf-8') for x in stop1])
+#spacy_stopwords = spacy.lang.en.stop_words.STOP_WORDS
+#stop1 = set(spacy_stopwords)
+#stop1 = set([x.encode('utf-8') for x in stop1])
 
 
 # load  sklearn stopwords
