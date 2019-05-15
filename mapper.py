@@ -1,12 +1,13 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 import sys
 import string
-from sklearn.feature_extraction import stop_words
-import functools
+#import sklearn
+#from sklearn.feature_extraction import stop_words
+#import functools
 from operator import or_
 import spacy as spacy
-import nltk
-from nltk.corpus import stopwords 
+#import nltk
+#from nltk.corpus import stopwords 
 
 # create set of stopworkds
 
@@ -19,7 +20,7 @@ from nltk.corpus import stopwords
 
 # load  sklearn stopwords
 
-stops = set(stop_words.ENGLISH_STOP_WORDS)
+stops = set(['the','i','be'])
 
 # load nltk stopwords
 #nltk.download('stopwords')
