@@ -5,7 +5,7 @@ import string
 from sklearn.feature_extraction import stop_words
 #import functools
 from operator import or_
-import spacy 
+#import spacy 
 import nltk
 from nltk.corpus import stopwords 
 
@@ -13,7 +13,7 @@ from nltk.corpus import stopwords
 
 # Load spacy stopwords
 
-spacy_nlp = spacy.load('en_core_web_sm')
+#spacy_nlp = spacy.load('en')
 #spacy_stopwords = spacy.lang.en.stop_words.STOP_WORDS
 #stop1 = set(spacy_stopwords)
 #stop1 = set([x.encode('utf-8') for x in stop1])
