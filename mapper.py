@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 import sys
 import string
-#import sklearn
 from sklearn.feature_extraction import stop_words
-#import functools
 from operator import or_
 #import spacy 
 import nltk
@@ -13,7 +11,9 @@ from nltk.corpus import stopwords
 
 # Load spacy stopwords
 
-#spacy_nlp = spacy.load('en')
+# running spacy.load('en') on a cluster  MR Job throws an error!!!!
+
+#spacy_nlp = spacy.load('en')  
 #spacy_stopwords = spacy.lang.en.stop_words.STOP_WORDS
 #stop1 = set(spacy_stopwords)
 #stop1 = set([x.encode('utf-8') for x in stop1])
@@ -23,7 +23,7 @@ from nltk.corpus import stopwords
 stop2 = set(stop_words.ENGLISH_STOP_WORDS)
 
 # load nltk stopwords
-#nltk.download('stopwords')
+
 stop3 = set(stopwords.words('english'))
 stop3 = set([x.encode('utf-8') for x in stop3])
 
