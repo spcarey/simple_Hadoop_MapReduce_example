@@ -11,11 +11,11 @@ from nltk.corpus import stopwords
 
 # Load spacy stopwords
 
-# running spacy.load('en') on a cluster  MR Job throws an error!!!!
-
 spacy_nlp = spacy.load('en')  
 spacy_stopwords = spacy.lang.en.stop_words.STOP_WORDS
 stop1 = set(spacy_stopwords)
+
+# convert all elements of the set to utf-8
 stop1 = set([x.encode('utf-8') for x in stop1])
 
 # load  sklearn stopwords
@@ -25,6 +25,8 @@ stop2 = set(stop_words.ENGLISH_STOP_WORDS)
 # load nltk stopwords
 
 stop3 = set(stopwords.words('english'))
+
+# convert all elements of the set to utf-8
 stop3 = set([x.encode('utf-8') for x in stop3])
 
 # combine all stopwords  from each set
