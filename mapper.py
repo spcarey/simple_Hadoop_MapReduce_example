@@ -3,7 +3,7 @@ import sys
 import string
 from sklearn.feature_extraction import stop_words
 from operator import or_
-#import spacy 
+import spacy 
 import nltk
 from nltk.corpus import stopwords 
 
@@ -13,10 +13,10 @@ from nltk.corpus import stopwords
 
 # running spacy.load('en') on a cluster  MR Job throws an error!!!!
 
-#spacy_nlp = spacy.load('en')  
-#spacy_stopwords = spacy.lang.en.stop_words.STOP_WORDS
-#stop1 = set(spacy_stopwords)
-#stop1 = set([x.encode('utf-8') for x in stop1])
+spacy_nlp = spacy.load('en')  
+spacy_stopwords = spacy.lang.en.stop_words.STOP_WORDS
+stop1 = set(spacy_stopwords)
+stop1 = set([x.encode('utf-8') for x in stop1])
 
 # load  sklearn stopwords
 
@@ -29,7 +29,7 @@ stop3 = set([x.encode('utf-8') for x in stop3])
 
 # combine all stopwords  from each set
 
-stops = reduce(or_, [ stop2, stop3])
+stops = reduce(or_, [stop1, stop2, stop3])
 
 
 
